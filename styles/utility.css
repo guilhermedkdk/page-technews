@@ -12,6 +12,10 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.grid-cols-4 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .gap-16 {
   gap: 16px;
 }
@@ -32,6 +36,11 @@
   font: var(--h3);
 }
 
-.font-sm {
+.text-sm {
   font: var(--text-sm);
+  color: var(--text-color-secondary);
+}
+
+.desktop-only {
+  display: none;
 }

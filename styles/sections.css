@@ -2,13 +2,14 @@ section header {
   border-top: 1px solid var(--stroke-color);
   padding-block: 12px 24px;
   font: var(--text-span);
+  color: var(--text-color-secondary);
 
-  a {
+  & a {
     justify-self: end;
     align-items: center;
     gap: 8px;
 
-    span {
+    & span {
       background-image: url(../assets/icons/ArrowRight.svg);
       width: 16px;
       height: 16px;
@@ -21,14 +22,30 @@ section header {
 }
 
 #featured {
-  grid-area: featured;
+  display: grid;
+  gap: 16px;
+  margin-inline: auto;
 
-  img {
+  & img {
     height: 100%;
     object-fit: cover;
   }
 
-  .card {
+  & h2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  & > div {
+    display: grid;
+    gap: 16px;
+  }
+
+  & .card {
+    max-width: 328px;
     border-radius: 4px;
     overflow: hidden;
     position: relative;
@@ -41,7 +58,7 @@ section header {
       background: linear-gradient(180deg, transparent 0%, #020617 100%);
     }
 
-    figcaption {
+    & figcaption {
       position: absolute;
       bottom: 0;
       padding: 24px;
@@ -50,68 +67,200 @@ section header {
         padding: 12px;
       }
 
-      h2 {
+      & h2 {
         margin-top: 8px;
       }
     }
   }
 }
 
-#weekly {
-  grid-area: weekly;
-
-  & > div {
-    grid-template-columns: repeat(4, 292px);
-  }
-
-  img {
-    height: 160px;
-  }
-
-  figure {
-    position: relative;
-
-    .content-tag {
-      position: absolute;
-      top: 8px;
-      left: 8px;
+@media (width >= 768px) {
+  #featured {
+    & .card {
+      margin-inline: auto;
+      max-width: 586px;
     }
 
-    p {
-      margin-top: 8px;
-      font-weight: 800;
+    & > div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 32px;
+
+      & .card {
+        max-width: 450px;
+        min-width: 300px;
+      }
+    }
+  }
+}
+
+@media (width >= 1280px) {
+  #featured {
+    grid-area: featured;
+
+    display: grid;
+    grid-auto-flow: column;
+    gap: 16px;
+
+    & > div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: auto;
+      margin-inline: auto;
+
+      & .card {
+        max-width: auto;
+        min-width: auto;
+      }
+    }
+  }
+}
+
+#weekly {
+  margin-inline: auto;
+  header {
+    & h3 {
+      font: var(--text-span);
+      color: var(--text-color-secondary);
+    }
+  }
+
+  & > div {
+    display: grid;
+    gap: 32px;
+
+    & figure {
+      position: relative;
+      width: 328px;
+      justify-self: center;
+
+      & .content-tag {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+      }
+
+      & p {
+        margin-top: 8px;
+        font-weight: 800;
+      }
+    }
+  }
+}
+
+@media (width >= 768px) {
+  #weekly {
+    & > div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+
+      & figure {
+        max-width: 450px;
+        min-width: 300px;
+        width: auto;
+      }
+    }
+  }
+}
+
+@media (width >= 1280px) {
+  #weekly {
+    grid-area: weekly;
+
+    & > div {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    & figure {
+      width: auto;
     }
   }
 }
 
 #ai {
-  grid-area: ai;
+  & article {
+    grid-template-columns: auto 1fr;
+  }
 
-  img {
-    width: 176px;
+  & img {
+    width: 80px;
     aspect-ratio: 1/1;
     object-fit: cover;
   }
 
-  h3 {
+  & .content {
+    width: auto;
+  }
+
+  & h3 {
     margin-block: 8px 4px;
   }
 }
 
+@media (width >= 1280px) {
+  #ai {
+    grid-area: ai;
+
+    & article {
+      grid-template-columns: 1fr auto;
+    }
+
+    & img {
+      grid-column: 2;
+      width: 176px;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+
+    & .content {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+}
+
 aside {
-  grid-area: aside;
+  & #ads {
+    text-align: center;
+
+    & img {
+      width: calc(100% - 600px);
+      min-width: 330px;
+      border-radius: 4px;
+    }
+  }
 }
 
 #more {
   margin-top: 32px;
 
-  h3 {
+  & article {
+    grid-template-columns: auto 1fr;
+  }
+
+  & h3 {
     margin-top: 8px;
   }
 
-  img {
+  & img {
     width: 72px;
     aspect-ratio: 1/1;
     object-fit: cover;
+  }
+}
+
+@media (width >= 1280px) {
+  aside {
+    grid-area: aside;
+
+    & #ads {
+      & img {
+        width: 100%;
+      }
+    }
   }
 }
