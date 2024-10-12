@@ -11,7 +11,7 @@ Uma página sobre um portal de notícias fictício feito como forma de estudos d
 </p>
 
 <p align="center">
-<img alt="" src="./github/thumbnail-tech-news.png" width="100%">
+<img alt="" src="./github/thumbnail-responsive.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -22,15 +22,17 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Git e Github
 - FIGMA
 
-## 💻 Projeto
+## 💻 Projeto e Desafio
 
-A "Technews Page" foi um mini projeto do curso Fullstack da Rocketseat no módulo "Avançando HTML e CSS", focado em CSS avançado. Nele, utilizei Display Grid para organizar a página, trabalhando com colunas, linhas e alinhamentos, consolidando esses conceitos.
+A "Technews Page" foi um mini projeto do curso Fullstack da Rocketseat no módulo "Avançando HTML e CSS", focado em CSS avançado. Nele, utilizei Display Grid para organizar a página, trabalhando com colunas, linhas, alinhamentos e como desafio tornei ela responsiva para mobile, consolidando esses conceitos.
 
 ## 📚 Aprendizados
 
 Este projeto foi feito dentro do curso de Fullstack no módulo "Avançando HTML e CSS" da Rocketseat.
 Nele pude consolidar os conhecimentos sobre:
+
 ### CSS
+
 - Display Grid
 - Grid Columns
 - Grid Rows
