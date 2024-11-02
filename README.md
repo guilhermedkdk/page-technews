@@ -4,7 +4,7 @@
 Uma página sobre um portal de notícias fictício feito como forma de estudos do curso Fullstack da Rocketseat</p>
 
 <p align="center">
-<a href="https://guilhermedkdk.github.io/rocket-technews-page/">🔗 Live Preview</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="https://guilhermedkdk.github.io/page-technews/">🔗 Live Preview</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#-tecnologias">🚀 Tecnologias</a>&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="#-projeto">💻 Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#-aprendizados">📚 Aprendizados</a>
