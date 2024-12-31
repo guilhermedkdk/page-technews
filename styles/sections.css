@@ -1,6 +1,7 @@
 section header {
-  border-top: 1px solid var(--stroke-color);
   padding-block: 12px 24px;
+  border-top: 1px solid var(--stroke-color);
+
   font: var(--text-span);
   color: var(--text-color-secondary);
 
@@ -10,9 +11,10 @@ section header {
     gap: 8px;
 
     & span {
-      background-image: url(../assets/icons/ArrowRight.svg);
       width: 16px;
       height: 16px;
+
+      background-image: url(../assets/icons/ArrowRight.svg);
     }
 
     &:hover span {
@@ -23,19 +25,21 @@ section header {
 
 #featured {
   display: grid;
+
   gap: 16px;
   margin-inline: auto;
 
   & img {
-    height: 100%;
     object-fit: cover;
+    height: 100%;
   }
 
   & h2 {
     display: -webkit-box;
+    overflow: hidden;
+
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    overflow: hidden;
     text-overflow: ellipsis;
   }
 
@@ -45,22 +49,25 @@ section header {
   }
 
   & .card {
+    position: relative;
+    overflow: hidden;
+
     max-width: 328px;
     border-radius: 4px;
-    overflow: hidden;
-    position: relative;
 
     &::before {
       content: "";
       position: absolute;
       inset: 0;
       top: 50%;
+
       background: linear-gradient(180deg, transparent 0%, #020617 100%);
     }
 
     & figcaption {
       position: absolute;
       bottom: 0;
+
       padding: 24px;
 
       &:has(.text-lg) {
@@ -77,13 +84,14 @@ section header {
 @media (width >= 768px) {
   #featured {
     & .card {
-      margin-inline: auto;
       max-width: 586px;
+      margin-inline: auto;
     }
 
     & > div {
       display: grid;
       grid-template-columns: 1fr 1fr;
+
       gap: 16px;
       margin-top: 32px;
 
@@ -101,11 +109,13 @@ section header {
 
     display: grid;
     grid-auto-flow: column;
+
     gap: 16px;
 
     & > div {
       display: grid;
       grid-template-columns: 1fr 1fr;
+
       gap: 16px;
       margin-top: auto;
       margin-inline: auto;
@@ -120,6 +130,7 @@ section header {
 
 #weekly {
   margin-inline: auto;
+
   header {
     & h3 {
       font: var(--text-span);
@@ -133,8 +144,9 @@ section header {
 
     & figure {
       position: relative;
-      width: 328px;
       justify-self: center;
+
+      width: 328px;
 
       & .content-tag {
         position: absolute;
@@ -210,10 +222,11 @@ section header {
     }
 
     & img {
-      grid-column: 2;
-      width: 176px;
-      aspect-ratio: 1/1;
       object-fit: cover;
+      grid-column: 2;
+      aspect-ratio: 1/1;
+
+      width: 176px;
     }
 
     & .content {
@@ -230,6 +243,7 @@ aside {
     & img {
       width: calc(100% - 600px);
       min-width: 330px;
+
       border-radius: 4px;
     }
   }
@@ -247,9 +261,10 @@ aside {
   }
 
   & img {
-    width: 72px;
-    aspect-ratio: 1/1;
     object-fit: cover;
+    aspect-ratio: 1/1;
+
+    width: 72px;
   }
 }
 
